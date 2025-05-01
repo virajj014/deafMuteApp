@@ -6,10 +6,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const VideoPlayer = ({ route, navigation }) => {
   const { videoUrl, lessonTitle } = route.params;
 
-  return (
+  let videoSource = require('../assets/sampleVideo.mp4');
+    return (
     <View style={styles.container}>
       <Video
-        source={{ uri: videoUrl }}
+        source={{ uri: videoSource }}
         style={styles.video}
         controls={true}
         resizeMode="contain"
